@@ -25,23 +25,29 @@
                     android:layout_height="125dp"
                     android:weightSum="3">
                     <ImageView
+                        android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:src="@drawable/hands"
 
 
                         />
                     <ImageView
+                        android:src="@drawable/handswithsan"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:padding="5dp"
 
 
                         />
                     <ImageView
+                        android:src="@drawable/shaehands"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:padding="5dp"
 
                         />
                 </LinearLayout>
@@ -50,22 +56,28 @@
                     android:layout_height="125dp"
                     android:weightSum="3">
                     <ImageView
+                        android:src="@drawable/person"
                         android:layout_width="0dp"
+                        android:padding="5dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
 
 
                         />
                     <ImageView
+                        android:src="@drawable/corona"
+                        android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
 
                         />
                     <ImageView
+                        android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:src="@drawable/date"
 
                         />
                 </LinearLayout>
