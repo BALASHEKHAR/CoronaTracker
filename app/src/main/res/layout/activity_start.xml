@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+
+<ScrollView
+    android:id="@+id/rscroll"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:ignore="Suspicious0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/audiowide"
+        android:text="INDIA"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/covid"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Select Your State:"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/arrow_down_float"
+        android:background="#EF0A0A"
+        android:layout_margin="2dp"
+        />
+
+
+
+    <Spinner
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+       android:textAlignment="gravity"
+android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/spinn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Select Your Town:"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/arrow_down_float"
+        android:background="#EF0A0A"
+        android:layout_margin="2dp"
+        />
+    <Spinner
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:textAlignment="gravity"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/spin2"/>
+
+    <Button
+      android:id="@+id/click"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Done"
+        android:background="@drawable/twotwo"
+        android:textColor="#fff"
+        android:textStyle="bold"
+      />
+
+    </LinearLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:id="@+id/rlinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading data.."
+            android:textSize="25dp"
+            android:textColor="#fff"/>
+<ProgressBar
+android:layout_width="50dp"
+android:layout_height="50dp"
+android:id="@+id/pg"/>
+    </LinearLayout>
+</LinearLayout>
