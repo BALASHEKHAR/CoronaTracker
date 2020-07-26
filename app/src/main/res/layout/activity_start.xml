@@ -5,9 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartActivity"
+
+    android:background="#906200EE"
     android:orientation="vertical"
     android:gravity="center"
     >
+    <ImageView
+        android:id="@+id/home"
+        android:contentDescription="Splash"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 <ScrollView
@@ -29,11 +37,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/audiowide"
         android:text="INDIA"
-        android:textColor="#000"
+        android:textColor="#fff"
+        android:textStyle="bold"
         android:textSize="30dp" />
 
     <ImageView
@@ -41,14 +50,15 @@
         android:layout_height="wrap_content"
         android:src="@drawable/covid"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_marginTop="50dp"
+        android:textColor="#fff"
+        android:layout_marginTop="40dp"
         android:text="Select Your State:"/>
     <ImageView
         android:layout_width="wrap_content"
@@ -66,15 +76,16 @@
        android:textAlignment="gravity"
 android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
-        android:textColor="#000"
-        android:layout_marginBottom="50dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="40dp"
         android:gravity="center_horizontal"
         android:id="@+id/spinn"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:text="Select Your Town:"/>
     <ImageView
@@ -89,8 +100,8 @@ android:layout_marginTop="15dp"
         android:layout_width="300dp"
         android:textAlignment="gravity"
         android:layout_height="wrap_content"
-        android:textColor="#000"
-        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="35dp"
         android:gravity="center_horizontal"
         android:id="@+id/spin2"/>
@@ -114,13 +125,15 @@ android:layout_marginTop="15dp"
         android:id="@+id/rlinear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000"
+
         android:gravity="center"
         >
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="loading data.."
+            android:textStyle="bold"
             android:textSize="25dp"
             android:textColor="#fff"/>
 <ProgressBar

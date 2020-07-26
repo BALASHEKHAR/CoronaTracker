@@ -3,13 +3,16 @@ package com.example.coronatracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -27,6 +30,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.Time;
 import java.util.ArrayList;
 
 public class StartActivity extends AppCompatActivity {
@@ -46,6 +50,34 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+
+
+
+
+
+        boolean isfirst;
+        SharedPreferences prefs = getSharedPreferences("splash", MODE_PRIVATE);
+        isfirst=prefs.getBoolean("bol",true);
+        if(!isfirst)
+        {
+            Intent i=new Intent(StartActivity.this,SampleActivity.class);
+            i.putExtra("s",ss);
+            i.putExtra("t",tt);
+            startActivity(i);
+            finish();
+        }
+        else
+        {
+            ImageView home=findViewById(R.id.home);
+            home.setImageResource(R.drawable.corona);
+            home.setVisibility(View.VISIBLE);
+            SystemClock.sleep(1000);
+            home.setVisibility(View.GONE);
+
+        }
+
+
         progressBar=findViewById(R.id.pg);
         progressBar.setVisibility(View.VISIBLE);
         spinner=findViewById(R.id.spinn);
@@ -61,10 +93,16 @@ public class StartActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(StartActivity.this,MainActivity2.class);
+
+                SharedPreferences.Editor editor = getSharedPreferences("splash", MODE_PRIVATE).edit();
+                editor.putBoolean("bol", false);
+                editor.apply();
+
+                Intent i=new Intent(StartActivity.this,SampleActivity.class);
                 i.putExtra("s",ss);
                 i.putExtra("t",tt);
                 startActivity(i);
+                finish();
             }
         });
 
